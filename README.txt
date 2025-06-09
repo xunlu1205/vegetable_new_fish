@@ -20,6 +20,15 @@ L298N 雙 H 橋馬達驅動板
 連接線、電源模組
 
 三、軟體結構
+setup() 初始化
+    ↓
+loop()
+  ├─ 超音波感測判斷障礙物 → STOP_MOTORS
+  ├─ 紅外線判斷左右轉、前進
+  └─ 狀態機控制馬達與 LED
+         ├─ TURN_LEFT / TURN_RIGHT
+         ├─ MOVE_FORWARD
+         └─ STOP_MOTORS → 播放音樂
 
 
 四、安裝與上傳
