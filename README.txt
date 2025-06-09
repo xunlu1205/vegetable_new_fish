@@ -30,6 +30,16 @@ LED 與蜂鳴器腳位（LED_L, LED_R, pinBuzzer）
 狀態列舉 enum State {...} 與狀態變數 state
 
 控制用的時間變數（如 lastToggleTime, turnStartTime）
+
+
+音階陣列 doremi[]
+
+曲譜索引 happybirthday[] 與節奏 meter[]
+
+控制播放的變數 noteIndex, noteStartTime, playingNote
+
+
+
 setup() 初始化
     ↓
 loop()
@@ -47,11 +57,16 @@ loop()
 3.點擊「上傳」編譯並燒錄至主控板。
 
 五、參數調整
-| 分類     | 參數                                     | 說明         |
-|-----    | ---------------------------------------- | ----------- |
-| 馬達控制 | `ENA~IN4`                                | 控制左右輪動作     |
-| 感測器   | `IR_L`, `IR_R`, `Trig`, `Echo`           | 紅外線循跡與避障    |
-| 輸出裝置 | `LED_L`, `LED_R`, `pinBuzzer`            | 顯示與聲音       |
-| 動作狀態 | `State`、`state`                         | 控制行為流程      |
-| 時間參數 | `turnDuration`, `lastToggleTime`         | 控制動作持續與閃爍節奏 |
-| 音樂參數 | `doremi[]`, `happybirthday[]`, `meter[]` | 音階與節奏控制     |
+| 名稱          | 數值         | 說明              |
+| ----------- | ---------- | --------------- |
+| `ENA`       | `6`        | 馬達 A 的 PWM 控制腳位 |
+| `IN1`/`IN2` | `7` / `8`  | 馬達 A 方向控制       |
+| `ENB`       | `5`        | 馬達 B 的 PWM 控制腳位 |
+| `IN3`/`IN4` | `9` / `10` | 馬達 B 方向控制       |
+| `IR_L`      | `11`       | 左紅外線感測器腳位       |
+| `IR_R`      | `12`       | 右紅外線感測器腳位       |
+| `LED_L`     | `2`        | 左側 LED 腳位       |
+| `LED_R`     | `4`        | 右側 LED 腳位       |
+| `Trig`      | `3`        | 超音波模組 Trig 腳位   |
+| `Echo`      | `13`       | 超音波模組 Echo 腳位   |
+| `pinBuzzer` | `A0`       | 蜂鳴器（DAC 輸出）腳位   |
