@@ -20,6 +20,16 @@ L298N 雙 H 橋馬達驅動板
 連接線、電源模組
 
 三、軟體結構
+
+馬達控制腳位（ENA, IN1, IN2, ENB, IN3, IN4）
+
+感測器腳位（IR_L, IR_R, Trig, Echo）
+
+LED 與蜂鳴器腳位（LED_L, LED_R, pinBuzzer）
+
+狀態列舉 enum State {...} 與狀態變數 state
+
+控制用的時間變數（如 lastToggleTime, turnStartTime）
 setup() 初始化
     ↓
 loop()
